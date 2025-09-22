@@ -1,0 +1,5 @@
+
+theme = catppuccin-mocha
+#theme = "one-dark"
+
+font-family = "Cascadia Mono NF" 
