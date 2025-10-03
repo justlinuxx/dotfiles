@@ -3,6 +3,9 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
 
+if ! command -v starship > /dev/null 2>&1; then
+  curl -sS https://starship.rs/install.sh | sh
+fi
 
 eval "$(starship init zsh)"
 
