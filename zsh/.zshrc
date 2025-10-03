@@ -36,3 +36,6 @@ bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
 abbr -f --quieter add ls="eza -lh --icons=auto --group-directories-first"
+
+echo -ne "\e[5 q"
+   
