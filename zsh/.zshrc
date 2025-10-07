@@ -12,8 +12,6 @@ eval "$(starship init zsh)"
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-zinit light olets/zsh-abbr
-
 
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
@@ -35,7 +33,7 @@ bindkey "^H" backward-kill-word
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
-abbr -f --quieter add ls="eza -lh --icons=auto --group-directories-first"
+alias ls="eza -lh --icons=auto --group-directories-first"
 
 echo -ne "\e[5 q"
    
