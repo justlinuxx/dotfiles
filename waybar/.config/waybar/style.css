@@ -1,7 +1,7 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: "CaskaydiaMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "FiraCode Nerd Font", Roboto, Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: bold;
   min-height: 0;
@@ -21,7 +21,7 @@ tooltip label {
 }
 
 .module {
-  background: rgba(50, 50, 50, 0.9);
+  background: #313244;
   border-radius: 10px;
   padding: 5px 5px;
   margin: 0 5px;
@@ -37,12 +37,28 @@ tooltip label {
 }
 
 #workspaces button.active {
-  background: #fff;
+  background: #cba6f7;
   color: #000;
 }
 
 #mode, #clock, #battery {
   padding: 0 10px;
+}
+
+#clock {
+  color: #f9e2af;
+}
+
+#battery {
+  color: #f38ba8;
+}
+
+#pulseaudio {
+  color: #94e2d5;
+}
+
+#network {
+  color: #74c7ec;
 }
 
 #mode {

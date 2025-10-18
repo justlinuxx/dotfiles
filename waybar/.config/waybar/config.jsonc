@@ -11,6 +11,7 @@
   },
 
   "clock": {
+    "format": "󰥔 {:%H:%M}",
     "format-alt": "{:%a, %d. %b  %H:%M}",
     "tooltip": false
   },
@@ -20,7 +21,7 @@
     "format": "{ifname}",
     "format-wifi": "  {essid}",
     "format-ethernet": "{ipaddr}/{cidr} 󰊗",
-    "format-disconnected": "", //An empty format will hide the module.
+    "format-disconnected": "  Disconnected", //An empty format will hide the module.
     "tooltip-format": "{ifname} via {gwaddr} 󰊗",
     "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
     "tooltip-format-ethernet": "{ifname} ",
@@ -53,4 +54,5 @@
     "scroll-step": 1,
     "on-click": "ghostty -e wiremix +new-window"
   }
+
 }

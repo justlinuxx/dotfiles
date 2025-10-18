@@ -37,3 +37,5 @@ alias ls="eza -lh --icons=auto --group-directories-first"
 
 echo -ne "\e[5 q"
    
+
+
