@@ -1,19 +1,20 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: "FiraCode Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "CaskaydiaMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: bold;
   min-height: 0;
 }
 
 window#waybar {
-  background: transparent;
+  background: #000;
   color: white;
 }
 
 tooltip {
-  background: rgba(43, 48, 59, 0.5);
+/*  background: rgba(43, 48, 59, 0.5); */
+  background: #000;
   border: 1px solid rgba(100, 114, 125, 0.5);
 }
 tooltip label {
@@ -21,7 +22,7 @@ tooltip label {
 }
 
 .module {
-  background: #313244;
+  background: #000;
   border-radius: 10px;
   padding: 5px 5px;
   margin: 0 5px;
@@ -37,7 +38,7 @@ tooltip label {
 }
 
 #workspaces button.active {
-  background: #cba6f7;
+  background: #fff;
   color: #000;
 }
 
@@ -45,21 +46,6 @@ tooltip label {
   padding: 0 10px;
 }
 
-#clock {
-  color: #f9e2af;
-}
-
-#battery {
-  color: #f38ba8;
-}
-
-#pulseaudio {
-  color: #94e2d5;
-}
-
-#network {
-  color: #74c7ec;
-}
 
 #mode {
   background: #64727D;
