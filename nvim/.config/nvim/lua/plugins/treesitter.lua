@@ -1,7 +1,7 @@
 return {
-  "nvim-treesitter/nvim-treesitter", 
-  branch = 'master', 
-  lazy = false, 
+  "nvim-treesitter/nvim-treesitter",
+  branch = 'master',
+  lazy = false,
   build = ":TSUpdate",
   config = function()
     local config = require('nvim-treesitter.configs')
@@ -10,5 +10,5 @@ return {
       highlight = { enable = true },
       indent = { enable = true }
     })
-  end  
+  end
 }

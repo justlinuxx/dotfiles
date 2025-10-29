@@ -35,7 +35,6 @@ bindkey "^[[1;5D" backward-word
 
 alias ls="eza -lh --icons=auto --group-directories-first"
 
+export Programming=/mnt/Home/Programming
+
 echo -ne "\e[5 q"
-   
-
-
