@@ -8,21 +8,21 @@
 }
 
 window#waybar {
-  background: #000;
+  background: rgba(0, 0, 0, 1);
   color: white;
 }
 
 tooltip {
 /*  background: rgba(43, 48, 59, 0.5); */
-  background: #000;
-  border: 1px solid rgba(100, 114, 125, 0.5);
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, .9);
 }
+
 tooltip label {
   color: white;
 }
 
 .module {
-  background: #000;
   border-radius: 10px;
   padding: 5px 5px;
   margin: 0 5px;
@@ -51,6 +51,7 @@ tooltip label {
   background: #64727D;
   border-bottom: 3px solid white;
 }
+
 
 @keyframes blink {
   to {

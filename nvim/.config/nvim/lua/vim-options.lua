@@ -7,3 +7,4 @@ vim.opt.number = true
 vim.opt.cursorline = true
 vim.g.mapleader = " "
 
+vim.diagnostic.enable = true
