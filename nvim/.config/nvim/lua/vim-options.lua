@@ -5,6 +5,7 @@ vim.opt.shiftwidth = 2
 vim.opt.smartindent = false
 vim.opt.number = true
 vim.opt.cursorline = true
+vim.opt.wrap = false
 vim.g.mapleader = " "
 
 vim.diagnostic.enable = true
