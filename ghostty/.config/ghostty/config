@@ -1,5 +1,4 @@
-theme = catppuccin-mocha
-#theme = "one-dark"
+theme = Catppuccin Mocha
 shell-integration = "zsh"
 shell-integration-features = true 
 font-family = "CaskaydiaMono Nerd Font Mono" 
