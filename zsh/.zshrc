@@ -24,6 +24,15 @@ source <(fzf --zsh)
 # Setup zoxide
 eval "$(zoxide init zsh)"
 
+# Setup yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
 # Zsh Settings
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
@@ -43,6 +52,8 @@ bindkey "^H" backward-kill-word
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
+# Keyoboard Shortcuts
+bindkey -s "^E" "yazi\n"
 
 # Aliases
 alias ls="eza -lh --icons=auto --group-directories-first"

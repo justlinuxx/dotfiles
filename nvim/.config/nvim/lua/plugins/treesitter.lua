@@ -6,7 +6,7 @@ return {
   config = function()
     local config = require('nvim-treesitter.configs')
     config.setup({
-      ensure_installed = { "lua", "javascript", "python", "html", "php" },
+      ensure_installed = { "lua", "javascript", "python", "html", "php", "svelte" },
       highlight = { enable = true },
       indent = { enable = true }
     })
