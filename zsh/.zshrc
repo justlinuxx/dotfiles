@@ -24,14 +24,6 @@ source <(fzf --zsh)
 # Setup zoxide
 eval "$(zoxide init zsh)"
 
-# Setup yazi
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
-	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
-}
 
 # Zsh Settings
 HISTSIZE=5000
@@ -58,6 +50,8 @@ bindkey -s "^E" "yazi\n"
 # Aliases
 alias ls="eza -lh --icons=auto --group-directories-first"
 alias cd='z'
+alias sl='sl -e'
+alias y=yazi
 
 # Variables
 export Programming=/mnt/Home/Programming
