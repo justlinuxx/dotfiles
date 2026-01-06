@@ -12,8 +12,6 @@ quick_activate = []
 [providers]
 default = [
   "desktopapplications",
-  "menus",
-  "websearch",
 ]
 
 [[providers.prefixes]]

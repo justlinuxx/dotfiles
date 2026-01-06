@@ -51,7 +51,15 @@ bindkey -s "^E" "yazi\n"
 alias ls="eza -lh --icons=auto --group-directories-first"
 alias cd='z'
 alias sl='sl -e'
-alias y=yazi
+
+# Yazi Setup
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
 
 # Variables
 export Programming=/mnt/Home/Programming
