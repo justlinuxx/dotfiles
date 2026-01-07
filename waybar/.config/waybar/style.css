@@ -1,71 +1,84 @@
+@define-color foreground #cdd6f4;
+@define-color background #181824;
+
 * {
+  background-color: @background;
+  color: @foreground;
+
   border: none;
   border-radius: 0;
-  font-family: "CaskaydiaMono Nerd Font Propo", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  font-weight: bold;
   min-height: 0;
+  font-family: 'CaskaydiaMono Nerd Font';
+  font-size: 12px;
 }
 
-window#waybar {
-  background: rgba(0, 0, 0, 1);
-  color: white;
+.modules-left {
+  margin-left: 8px;
 }
 
-tooltip {
-/*  background: rgba(43, 48, 59, 0.5); */
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, .9);
-}
-
-tooltip label {
-  color: white;
-}
-
-.module {
-  border-radius: 10px;
-  padding: 5px 5px;
-  margin: 0 5px;
+.modules-right {
+  margin-right: 8px;
 }
 
 #workspaces button {
-  background: transparent;
-  color: #fff;
-  border-radius: 5px;
-  padding: 2px 5px;
-  transition: background, color;
-  transition-duration: 100ms;
+  all: initial;
+  padding: 0 6px;
+  margin: 0 1.5px;
+  min-width: 9px;
 }
 
-#workspaces button.active {
-  background: #fff;
-  color: #000;
+#workspaces button.empty {
+  opacity: 0.5;
 }
 
-#mode, #clock, #battery {
-  padding: 0 10px;
+#cpu,
+#battery,
+#pulseaudio,
+#custom-omarchy,
+#custom-screenrecording-indicator,
+#custom-update {
+  min-width: 12px;
+  margin: 0 7.5px;
 }
 
-
-#mode {
-  background: #64727D;
-  border-bottom: 3px solid white;
+#tray {
+  margin-right: 16px;
 }
 
-
-@keyframes blink {
-  to {
-    background-color: #ffffff;
-    color: black;
-  }
+#bluetooth {
+  margin-right: 17px;
 }
 
-#battery.warning:not(.charging) {
-  background: #f53c3c;
-  color: white;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: steps(12);
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+#network {
+  margin-right: 13px;
+}
+
+#custom-expand-icon {
+  margin-right: 18px;
+}
+
+tooltip {
+  padding: 2px;
+}
+
+#custom-update {
+  font-size: 10px;
+}
+
+#clock {
+  margin-left: 8.75px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+#custom-screenrecording-indicator {
+  min-width: 12px;
+  margin-left: 8.75px;
+  font-size: 10px;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #a55555;
 }
