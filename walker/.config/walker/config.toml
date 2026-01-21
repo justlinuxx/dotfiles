@@ -3,6 +3,7 @@ selection_wrap = true                                                       # wr
 theme = "main"
 hide_action_hints = true
 
+
 [placeholders]
 "default" = { input = " Search...", list = "No Results" } # placeholders for input and empty list, key is the providers name, so f.e. "desktopapplications" or "menus:other"
 
@@ -10,6 +11,7 @@ hide_action_hints = true
 quick_activate = []
 
 [providers]
+max_results = 50  # Change this number to your preference
 default = [
   "desktopapplications",
 ]

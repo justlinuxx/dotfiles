@@ -9,3 +9,5 @@ vim.opt.wrap = false
 vim.g.mapleader = " "
 
 vim.diagnostic.enable = true
+
+
