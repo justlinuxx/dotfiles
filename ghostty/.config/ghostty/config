@@ -3,3 +3,4 @@ shell-integration = "zsh"
 shell-integration-features = true 
 font-family = "CaskaydiaMono Nerd Font Mono" 
 font-size = 12
+

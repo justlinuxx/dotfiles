@@ -32,7 +32,7 @@ truncation_length = 999
 [character]
 success_symbol = "[❯](purple)"
 error_symbol = "[❯](red)"
-vimcmd_symbol = "[❮](green)"
+vimcmd_symbol = "[❮](orange)"
 
 [git_branch]
 format = "[$branch]($style)"
