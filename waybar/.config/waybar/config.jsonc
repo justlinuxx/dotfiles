@@ -59,7 +59,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "xdg-terminal-exec -e impala +new-window"
+    "on-click": "~/.mybin/launch-tui impala"
   },
 
  
@@ -71,12 +71,12 @@
     "tooltip-format-connected": "{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}",
     "tooltip-format-enumerate-connected-battery": "{device_alias} 󰁹{device_battery_percentage}%",
-    "on-click": "ghostty -e bluetui +new-window"
+    "on-click": "~/.mybin/launch-tui bluetui"
   },
 
   "pulseaudio": {
     "format": "{icon}",
-    "on-click": "xdg-terminal-exec -e wiremix -v output +new-window",
+    "on-click": "~/.mybin/launch-tui wiremix -v output",
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,

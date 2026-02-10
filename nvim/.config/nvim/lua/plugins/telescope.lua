@@ -20,5 +20,6 @@ return {
       }
       require("telescope").load_extension("ui-select")
     end
-  }
+  },
+  { 'nvim-telescope/telescope-fzf-native.nvim' }
 }
