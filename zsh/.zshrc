@@ -53,10 +53,6 @@ set_zsh_settings() {
   setopt hist_ignore_dups
   setopt hist_find_no_dups
 
-  # Set cursor style
-  echo -ne "\e[5 q"
-
-
   autoload -U compinit && compinit
 }
 

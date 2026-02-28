@@ -3,6 +3,8 @@ return {
 
   dependencies = { 'rafamadriz/friendly-snippets' },
 
+  build = 'cargo build --release',
+
   opts = {
     keymap = { preset = 'default' },
 

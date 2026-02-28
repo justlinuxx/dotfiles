@@ -9,10 +9,10 @@ return {
       ensure_installed = {
         'lua_ls',
         'pyright',
-        'bash_language_server',
+        'bash-language-server',
         'svelte-language-server',
         'hyprls',
-        'ast-grep'
+        'ast_grep'
       }
     }
   },

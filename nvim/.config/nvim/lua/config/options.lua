@@ -11,19 +11,29 @@ vim.g.mapleader = " "
 vim.diagnostic.enable = true
 
 -- Set the folding method
-vim.o.foldmethod = 'expr'  -- Use expression-based folding
-vim.o.foldexpr = 'nvim_treesitter#foldexpr()'  -- Use Tree-sitter for better language-aware folding
+vim.o.foldmethod = 'expr'                     -- Use expression-based folding
+vim.o.foldexpr = 'nvim_treesitter#foldexpr()' -- Use Tree-sitter for better language-aware folding
 
 -- Set the fold level
-vim.o.foldlevelstart = 99  -- Start with all folds open
+vim.o.foldlevelstart = 99 -- Start with all folds open
 
 -- Additional options for folding
-vim.o.foldenable = true  -- Enable folding
+vim.o.foldenable = true -- Enable folding
 
 -- Key mappings for folding
-vim.api.nvim_set_keymap('n', '<Leader>f', 'za', { noremap = true, silent = true })  -- Toggle fold
-vim.api.nvim_set_keymap('n', '<Leader>o', 'zR', { noremap = true, silent = true })  -- Open all folds
-vim.api.nvim_set_keymap('n', '<Leader>c', 'zM', { noremap = true, silent = true })  -- Close all folds
+vim.api.nvim_set_keymap('n', '<Leader>f', 'za', { noremap = true, silent = true }) -- Toggle fold
+vim.api.nvim_set_keymap('n', '<Leader>o', 'zR', { noremap = true, silent = true }) -- Open all folds
+vim.api.nvim_set_keymap('n', '<Leader>c', 'zM', { noremap = true, silent = true }) -- Close all folds
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "python",
+  callback = function()
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.tabstop = 2
+    vim.opt_local.softtabstop = 2
+    vim.opt_local.expandtab = true
+  end,
+})
 
 
 vim.diagnostic.config({
