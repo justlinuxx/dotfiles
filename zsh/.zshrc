@@ -68,6 +68,8 @@ setup_bindings() {
 set_aliases() {
   alias ls="eza -lh --icons=auto --group-directories-first"
   alias cd='z'
+  alias n='nvim'
+  alias lg='lazygit'
 }
 
 set_variables() {
