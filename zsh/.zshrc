@@ -11,6 +11,7 @@ install_plugins() {
   zinit light zsh-users/zsh-syntax-highlighting
   zinit light zsh-users/zsh-completions
   zinit light zsh-users/zsh-autosuggestions
+  zinit light olets/zsh-abbr
 }
 
 setup_prompt() {
@@ -53,7 +54,8 @@ set_zsh_settings() {
   setopt hist_ignore_dups
   setopt hist_find_no_dups
 
-  autoload -U compinit && compinit
+  autoload -Uz compinit && compinit
+  ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 }
 
 setup_bindings() {
@@ -61,8 +63,6 @@ setup_bindings() {
   bindkey "^[[1;5C" forward-word
   bindkey "^[[1;5D" backward-word
   bindkey "^[[3~" delete-char
-
-  bindkey -s "^E" "yazi\n"
 }
 
 set_aliases() {

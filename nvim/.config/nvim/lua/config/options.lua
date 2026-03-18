@@ -1,42 +1,50 @@
-vim.opt.expandtab = true
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.smartindent = false
-vim.opt.number = true
-vim.opt.cursorline = true
-vim.opt.wrap = false
-vim.g.mapleader = " "
+-- Leader
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
-vim.diagnostic.enable = true
+-- Nerd Font
+vim.g.have_nerd_font = true
 
--- Set the folding method
-vim.o.foldmethod = 'expr'                     -- Use expression-based folding
-vim.o.foldexpr = 'nvim_treesitter#foldexpr()' -- Use Tree-sitter for better language-aware folding
+-- Tabs
+vim.o.expandtab = true
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
 
--- Set the fold level
-vim.o.foldlevelstart = 99 -- Start with all folds open
+-- Lines
+vim.o.number = true
+vim.o.cursorline = true
 
--- Additional options for folding
-vim.o.foldenable = true -- Enable folding
+-- Enable Mouse
+vim.o.mouse = 'a'
 
--- Key mappings for folding
-vim.api.nvim_set_keymap('n', '<Leader>f', 'za', { noremap = true, silent = true }) -- Toggle fold
-vim.api.nvim_set_keymap('n', '<Leader>o', 'zR', { noremap = true, silent = true }) -- Open all folds
-vim.api.nvim_set_keymap('n', '<Leader>c', 'zM', { noremap = true, silent = true }) -- Close all folds
+vim.schedule(function() vim.o.clipboard = 'unnamedplus' end) -- Schedule it, faster startup time
 
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "python",
-  callback = function()
-    vim.opt_local.shiftwidth = 2
-    vim.opt_local.tabstop = 2
-    vim.opt_local.softtabstop = 2
-    vim.opt_local.expandtab = true
-  end,
-})
+vim.o.undofile = true
 
+vim.o.ignorecase = true
+vim.o.smartcase = true
 
+vim.o.signcolumn = 'yes'
+
+vim.o.updatetime = 250
+
+-- Time in ms to wait for key pressess
+vim.o.timeoutlen = 300
+
+vim.o.scrolloff = 10
+
+vim.o.confirm = true
+
+-- Diagnostic Options
 vim.diagnostic.config({
-  virtual_text = true
+  severity_sort = true, float = { border = 'rounded', source = 'if_many' },
+  underline = { severity = { min = vim.diagnostic.severity.WARN } },
+
+  -- Can switch between these as you prefer
+  virtual_text = true,   -- Text shows up at the end of the line
+  virtual_lines = false, -- Text shows up underneath the line, with virtual lines
+
+  -- Auto open the float, so you can easily read the errors when jumping with `[d` and `]d`
+  jump = { float = true },
 })
-vim.opt.signcolumn = "yes"
+
