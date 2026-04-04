@@ -87,4 +87,3 @@ set_zsh_settings
 setup_bindings
 set_variables
 set_aliases
-

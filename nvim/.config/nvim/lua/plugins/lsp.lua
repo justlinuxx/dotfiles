@@ -10,7 +10,8 @@ return {
         'svelte',
         'hyprls',
         'bashls',
-        'tailwindcss'
+        'tailwindcss',
+        'ts_ls'
       },
     }
   },

@@ -13,6 +13,7 @@ vim.o.shiftwidth = 2
 -- Lines
 vim.o.number = true
 vim.o.cursorline = true
+vim.o.wrap = false
 
 -- Enable Mouse
 vim.o.mouse = 'a'
@@ -35,9 +36,12 @@ vim.o.scrolloff = 10
 
 vim.o.confirm = true
 
+vim.o.winborder = 'rounded'
+
 -- Diagnostic Options
 vim.diagnostic.config({
-  severity_sort = true, float = { border = 'rounded', source = 'if_many' },
+  severity_sort = true,
+  float = { border = 'rounded', source = 'if_many' },
   underline = { severity = { min = vim.diagnostic.severity.WARN } },
 
   -- Can switch between these as you prefer
@@ -47,4 +51,3 @@ vim.diagnostic.config({
   -- Auto open the float, so you can easily read the errors when jumping with `[d` and `]d`
   jump = { float = true },
 })
-

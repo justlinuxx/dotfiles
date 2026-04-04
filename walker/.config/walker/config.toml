@@ -1,7 +1,8 @@
-force_keyboard_focus = true                                                 # forces keyboard forcus to stay in Walker
-selection_wrap = true                                                       # wrap list if at bottom or top
+force_keyboard_focus = true
+selection_wrap = true
 theme = "main"
 hide_action_hints = true
+exact_search_prefix = ''
 
 
 [placeholders]
