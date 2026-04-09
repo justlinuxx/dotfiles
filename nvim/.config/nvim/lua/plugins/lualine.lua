@@ -11,7 +11,10 @@ return {
       } },
       lualine_x = { 'encoding', 'fileformat' },
       lualine_y = { {
-        'filetype', icon_only = true
+        'filetype',
+        fmt = function(str)
+          return str:sub(1, 1):upper() .. str:sub(2)
+        end
       } },
       lualine_z = { 'location' }
     }
