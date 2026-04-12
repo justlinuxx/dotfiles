@@ -1,6 +1,5 @@
 @define-color fg white;
 @define-color bg #111;
-@define-color bg2 #333;
 
 * {
   border: none;
@@ -22,14 +21,14 @@ window#waybar {
 }
 
 .module {
-  background: @bg2;
+  background: @bg;
   padding: 0 8px;
   margin: 0 5px;
   border-radius: 15px;
 }
 
 #workspaces {
-  background: @bg2;
+  background: @bg;
   padding: 2px 5px;
   border: none;
   transition: all 200ms ease-in-out;
@@ -41,7 +40,6 @@ window#waybar {
   margin: 0 2px;
   transition: all 200ms ease-in-out;
 }
-
 
 #workspaces button.active {
   min-width: 40px;
