@@ -7,3 +7,10 @@ alias ls="eza -lh --icons=auto --group-directories-first"
 alias cd='z'
 alias n='nvim'
 alias lg='lazygit'
+
+# Pacman Aliases
+if [[ -f /etc/arch-release ]]; then
+  alias i="yay -S"
+  alias s="yay -Ss"
+  alias u="yay"
+fi
