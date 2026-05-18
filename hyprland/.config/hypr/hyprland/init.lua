@@ -1,0 +1,7 @@
+require("hyprland.general")
+require("hyprland.appearance")
+require("hyprland.layouts")
+require("hyprland.bindings")
+require("hyprland.rules")
+require("hyprland.startup")
+require("hyprland.input")
