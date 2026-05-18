@@ -8,10 +8,8 @@ return {
         'lua_ls',
         'pyright',
         'svelte',
-        'hyprls',
         'bashls',
         'tailwindcss',
-        'ts_ls'
       },
     }
   },
