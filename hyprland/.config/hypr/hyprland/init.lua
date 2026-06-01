@@ -1,5 +1,7 @@
 require("hyprland.general")
+require("hyprland.bindings.init")
 require("hyprland.appearance")
+require("hyprland.animations")
 require("hyprland.layouts")
 require("hyprland.bindings")
 require("hyprland.rules")

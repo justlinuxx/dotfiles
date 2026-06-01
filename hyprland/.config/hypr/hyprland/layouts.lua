@@ -3,6 +3,7 @@ hl.config({
     layout = "scrolling"
   }
 })
+
 --------------------
 -- CONFIGURATIONS --
 --------------------

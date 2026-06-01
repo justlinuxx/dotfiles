@@ -1,58 +1,34 @@
------------------------
----- LOOK AND FEEL ----
------------------------
-
+-- LOOK AND FEEL --
 hl.config({
   general = {
-    gaps_in          = 5,
-    gaps_out         = 20,
+    gaps_in = 5,
+    gaps_out = 10,
 
-    border_size      = 2,
+    border_size = 2,
 
-    col              = {
-      active_border   = "rgba(ffffffff)",
+    col = {
+      active_border = "rgba(ffffffff)",
       inactive_border = "rgba(595959aa)",
     },
 
-    -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
     resize_on_border = false,
 
-    allow_tearing    = false,
+    allow_tearing = false,
 
-    layout           = "scrolling",
+    float_gaps = -1,
+
+    layout = "scrolling",
   },
-
   decoration = {
-    shadow           = {
+    shadow = {
       enabled = false
     },
 
     -- Change transparency of focused and unfocused windows
-    active_opacity   = 1.0,
+    active_opacity = 1,
     inactive_opacity = 1,
   },
   animations = {
     enabled = true,
   },
-})
-
--- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
-hl.curve("easeOutQuint", { type = "bezier", points = { { 0.23, 1 }, { 0.32, 1 } } })
-hl.curve("easeInOutCubic", { type = "bezier", points = { { 0.65, 0.05 }, { 0.36, 1 } } })
-hl.curve("linear", { type = "bezier", points = { { 0, 0 }, { 1, 1 } } })
-hl.curve("almostLinear", { type = "bezier", points = { { 0.5, 0.5 }, { 0.75, 1 } } })
-hl.curve("quick", { type = "bezier", points = { { 0.15, 0 }, { 0.1, 1 } } })
-
--- Default springs
-hl.curve("easy", { type = "spring", mass = 1, stiffness = 71.2633, dampening = 15.8273644 })
-
-hl.animation({ leaf = "global", enabled = false, speed = 10, bezier = "default" })
-hl.animation({ leaf = "windows", enabled = true, speed = 3, bezier = "easeOutQuint" })
-hl.animation({ leaf = "fade", enabled = true, speed = 3.03, bezier = "quick" })
-hl.animation({ leaf = "workspaces", enabled = true, speed = 1.5, bezier = "easeInOutCubic", style = "fade" })
-
-hl.config({
-  misc = {
-    disable_hyprland_logo = true
-  }
 })

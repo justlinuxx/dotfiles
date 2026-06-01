@@ -1,13 +1,10 @@
----------------
----- INPUT ----
----------------
-
+-- INPUT --
 hl.config({
   input = {
     kb_layout     = "us,sk",
     kb_variant    = ",qwerty",
     kb_model      = "",
-    kb_options    = "grp:alts_toggle",
+    kb_options    = "grp:alts_toggle, caps:none",
     kb_rules      = "",
 
     follow_mouse  = 1,
@@ -22,10 +19,7 @@ hl.config({
 })
 
 
-------------------
----- GESTURES ----
-------------------
-
+-- GESTURES --
 hl.gesture({
   fingers = 3,
   direction = "horizontal",

@@ -19,5 +19,26 @@ hl.window_rule({
     class = "cfg.tui.*"
   },
   float = true,
-  size = { 800, 600 }
+  size = { 1000, 700 }
+})
+
+hl.window_rule({
+  name = "floating-satty",
+  match = {
+    title = "satty"
+  },
+  float = true,
+  size = { 1000, 700 }
+})
+
+hl.window_rule({
+  name = "floating-ninjabrain",
+  match = {
+    class = "ninjabrainbot-Main"
+  },
+  no_initial_focus = true,
+  float = true,
+  move = { 1400, 50 },
+  opacity = 0.8,
+  suppress_event = "activatefocus activate"
 })
