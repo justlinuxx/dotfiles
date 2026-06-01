@@ -11,17 +11,12 @@
     "on-click": "activate",
     "format": "{icon}",
     "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": []
+      "*": 5,
     }
   },
-
   "clock": {
     "format": "{:%H:%M}",
-    "format-alt": "{:L%d %B W%V %Y}",
+    "format-alt": "{:L%d/%m/%Y}",
     "tooltip": false
   },
 

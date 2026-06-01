@@ -19,7 +19,7 @@ return {
           pos = "left"
         },
         git = { enabled = true },
-        filter = {cwd = true}
+        filter = { cwd = true }
       }
     },
     keys = {

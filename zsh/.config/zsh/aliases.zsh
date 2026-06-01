@@ -10,7 +10,8 @@ alias lg='lazygit'
 
 # Pacman Aliases
 if [[ -f /etc/arch-release ]]; then
-  alias i="yay -S"
+  alias i="yay -S --needed"
   alias s="yay -Ss"
   alias u="yay"
+  alias r="yay -Rns"
 fi
