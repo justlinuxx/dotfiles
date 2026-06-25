@@ -1,0 +1,4 @@
+# Disable command mode line highlight
+ZVM_VI_HIGHLIGHT_BACKGROUND=none
+ZVM_VI_HIGHLIGHT_FOREGROUND=none
+ZVM_VI_HIGHLIGHT_EXTRASTYLE=none
