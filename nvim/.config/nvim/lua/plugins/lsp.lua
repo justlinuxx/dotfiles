@@ -18,6 +18,13 @@ return {
     "neovim/nvim-lspconfig",
     dependencies = { 'mason-org/mason-lspconfig.nvim' },
     config = function()
+      vim.lsp.config('cssls', {
+        settings = {
+          css = {
+            validate = false,
+          },
+        },
+      })
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(event)
           local opts = { buffer = event.buf }

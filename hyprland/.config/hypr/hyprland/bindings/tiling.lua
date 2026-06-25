@@ -14,8 +14,8 @@ bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
 bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
 bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
 
-bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
-bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
+bind(mainMod .. " + SHIFT + H", hl.dsp.layout("swapcol l"))
+bind(mainMod .. " + SHIFT + L", hl.dsp.layout("swapcol r"))
 bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
 bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
 
@@ -37,3 +37,6 @@ bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+
+bind(mainMod .. " + Equal", hl.dsp.layout("colresize +conf"))
+bind(mainMod .. " + Minus", hl.dsp.layout("colresize -conf"))

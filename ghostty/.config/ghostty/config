@@ -1,8 +1,4 @@
 theme = Catppuccin Mocha
-shell-integration-features = true 
-font-family = "CaskaydiaMono Nerd Font"
+shell-integration-features = ssh-env 
+font-family = "CaskaydiaMono Nerd Font Propo"
 font-size = 13
-
-shell-integration-features = no-cursor
-cursor-style = bar
-cursor-style-blink = false

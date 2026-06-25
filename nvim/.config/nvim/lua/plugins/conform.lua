@@ -3,9 +3,9 @@ return {
     'stevearc/conform.nvim',
     opts = {
       formatters_by_ft = {
-        svelte = { 'prettier' },
+        svelte = { 'prettierd' },
         javascript = { 'prettier' },
-        typescript = { 'prettier' },
+        typescript = { 'prettierd' },
         css = { "prettier" },
         html = { "prettier" },
       },
