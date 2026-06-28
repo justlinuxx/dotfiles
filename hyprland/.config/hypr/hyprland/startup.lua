@@ -20,6 +20,7 @@ hl.on("hyprland.start", function()
 
   -- User apps
   hl.exec_cmd("discord")
+  hl.exec_cmd("niri-screen-time -daemon")
 end)
 
 
