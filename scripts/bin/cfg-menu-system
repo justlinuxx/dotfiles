@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+options="  Lock\n󰤄  Suspend\n󰜉  Reboot\n󰐥  Shutdown"
+
+case $(echo -e "$options" | fuzzel --dmenu --lines 4) in
+  *Lock*)     hyprlock ;;
+  *Suspend*)  systemctl suspend ;;
+  *Reboot*)   reboot ;;
+  *Shutdown*) shutdown now ;;
+esac

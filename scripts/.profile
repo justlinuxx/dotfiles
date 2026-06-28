@@ -1,0 +1,3 @@
+if [ -d ~/bin ] ; then
+    PATH=$HOME/bin:"${PATH}"
+fi

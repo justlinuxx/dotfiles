@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+grim -g "$(slurp -d)" - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y%m%d_%H%M%S.png"

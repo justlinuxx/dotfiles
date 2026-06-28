@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+tui=$1
+
+xdg-terminal-exec --app-id="cfg.tui.${tui}" $@
