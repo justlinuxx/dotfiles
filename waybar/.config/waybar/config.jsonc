@@ -39,7 +39,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "cfg-launch-tui impala",
+    "on-click": "cfg-launch-tui wlctl",
     "on-click-right": "cfg-wifi-toggle"
   },
 

@@ -16,6 +16,6 @@ bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 bind(mainMod .. " + Escape", hl.dsp.exec_cmd("cfg-menu-system"))
 
 -- TUIs
-bind(mainMod .. " + CTRL + W", hl.dsp.exec_cmd("cfg-launch-tui impala"))
+bind(mainMod .. " + CTRL + W", hl.dsp.exec_cmd("cfg-launch-tui wlctl"))
 bind(mainMod .. " + CTRL + B", hl.dsp.exec_cmd("cfg-launch-tui bluetui"))
 bind(mainMod .. " + CTRL + A", hl.dsp.exec_cmd("cfg-launch-tui wiremix -v output"))
