@@ -8,11 +8,10 @@
   "modules-right": ["group/tray-expander", "bluetooth", "network", "pulseaudio", "battery"],
 
   "hyprland/workspaces": {
-    "on-click": "activate",
     "format": "{icon}",
     "persistent-workspaces": {
       "*": 5,
-    }
+    },
   },
   "clock": {
     "format": "{:%H:%M}",
