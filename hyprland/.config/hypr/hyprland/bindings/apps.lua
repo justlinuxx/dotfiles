@@ -2,7 +2,7 @@ local mainMod = "SUPER"
 local bind = hl.bind
 
 -- Apps
-local terminal = "ghostty"
+local terminal = "ghostty +new-window"
 local menu = "fuzzel"
 local fileManager = "nautilus"
 local browser = "zen-browser"
@@ -10,7 +10,7 @@ local browser = "zen-browser"
 bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu)) -- Apps Menu
 
 bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
-bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
+bind(mainMod .. " + SHIFT + Return", hl.dsp.exec_cmd(browser))
 bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 
 bind(mainMod .. " + Escape", hl.dsp.exec_cmd("cfg-menu-system"))

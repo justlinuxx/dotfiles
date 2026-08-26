@@ -38,6 +38,8 @@ vim.o.confirm = true
 
 vim.o.showmode = false
 
+vim.o.autoindent = true
+
 -- Diagnostic Options
 vim.diagnostic.config({
     severity_sort = true,
