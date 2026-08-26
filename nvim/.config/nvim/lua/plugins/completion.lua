@@ -24,7 +24,6 @@ return {
             fuzzy = {
                 implementation = 'lua',
             },
-
         },
     }
 }

@@ -1,26 +1,26 @@
 hl.on("hyprland.start", function()
-  -- Bar
-  hl.exec_cmd("waybar")
+    -- Shell
+    hl.exec_cmd("quickshell")
 
-  -- Notification Daemon
-  hl.exec_cmd("mako")
+    -- Notification Daemon
+    hl.exec_cmd("mako")
 
-  -- Wallpaper
-  hl.exec_cmd("hyprpaper")
+    -- Wallpaper
+    hl.exec_cmd("hyprpaper")
 
-  -- Night light
-  hl.exec_cmd("sunsetr")
+    -- Night light
+    hl.exec_cmd("sunsetr")
 
-  -- Idling
-  hl.exec_cmd("hypridle")
+    -- Idling
+    hl.exec_cmd("hypridle")
 
-  -- Clipboard History
-  hl.exec_cmd("wl-paste --type text --watch cliphist store")
-  hl.exec_cmd("wl-paste --type image --watch cliphist store")
+    -- Clipboard History
+    hl.exec_cmd("wl-paste --type text --watch cliphist store")
+    hl.exec_cmd("wl-paste --type image --watch cliphist store")
 
-  -- User apps
-  hl.exec_cmd("discord")
-  hl.exec_cmd("niri-screen-time -daemon")
+    -- User apps
+    hl.exec_cmd("discord")
+    hl.exec_cmd("niri-screen-time -daemon")
 end)
 
 
