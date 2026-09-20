@@ -14,7 +14,7 @@ PanelWindow {
         right: true
     }
 
-    implicitHeight: 30
+    implicitHeight: Config.panel.height
 
     Rectangle {
         anchors.fill: parent

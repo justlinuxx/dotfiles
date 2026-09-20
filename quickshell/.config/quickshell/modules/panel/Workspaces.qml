@@ -12,7 +12,7 @@ Repeater {
         property bool isFocused: Hyprland.focusedWorkspace?.id == index + 1
         property bool isActive: Hyprland.workspaces.values.some(w => w.id == index + 1)
 
-        visible: (isFocused || index < 5)
+        visible: (isActive || isFocused || index < 5)
 
         color: (isFocused) ? Config.colors.fg : Config.colors.bg
 

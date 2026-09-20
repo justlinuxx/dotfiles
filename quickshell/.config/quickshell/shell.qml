@@ -1,4 +1,8 @@
 import "./modules/"
 import QtQuick
+import Quickshell
 
-Panel {}
+Scope {
+    Panel {}
+    AppsMenu {}
+}

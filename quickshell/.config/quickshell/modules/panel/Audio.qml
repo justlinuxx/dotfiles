@@ -1,27 +1,49 @@
 import Quickshell
 import Quickshell.Services.Pipewire
 import QtQuick
+import QtQuick.Layouts
 import qs
 import qs.components
 
-Text {
-    PwObjectTracker {
-        objects: [Pipewire.defaultAudioSink]
+RowLayout {
+    spacing: 0
+    RowLayout {
+        id: root
+        spacing: 6
+
+        property PwNode audioOutput: Pipewire.defaultAudioSink
+        property int volume: (audioOutput?.audio.volume ?? 0) * 100
+
+        Text {
+            PwObjectTracker {
+                objects: [Pipewire.defaultAudioSink]
+            }
+
+            function getVolumeIcon() {
+                if (root.audioOutput?.audio.muted || root.volume == 0)
+                    return '';
+                const volumeIcons = ['', '', ''];
+                return Utils.getIcon(root.volume, volumeIcons);
+            }
+
+            text: `${getVolumeIcon()}`
+            font: Config.font
+            color: Config.colors.fg
+        }
+
+        Text {
+            text: `${root.volume}%`
+            visible: hoverArea.containsMouse
+            font: Config.font
+            color: Config.colors.light_fg
+        }
     }
 
-    property PwNode audioOutput: Pipewire.defaultAudioSink
-    property int volume: (audioOutput?.audio.volume ?? 0) * 100
-
-    function getVolumeIcon() {
-        if (audioOutput?.audio.muted || volume == 0)
-            return '';
-        const volumeIcons = ['', '', ''];
-        return Utils.getIcon(volume, volumeIcons);
+    MouseArea {
+        id: hoverArea
+        hoverEnabled: true
+        anchors.fill: parent
     }
-
-    text: `${getVolumeIcon()}`
-    font: Config.font
-    color: Config.colors.fg
 
     Clickable {
         onLeftClick: Quickshell.execDetached(['cfg-launch-tui', 'wiremix', '-v', 'output'])

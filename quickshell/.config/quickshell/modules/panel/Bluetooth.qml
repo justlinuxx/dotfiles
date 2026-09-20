@@ -10,6 +10,8 @@ Text {
     function getBluetoothIcon() {
         if (adapter?.state == BluetoothAdapterState.Disabled)
             return '󰂲';
+        if (adapter?.devices.values.some(dev => dev.state == BluetoothDeviceState.Connecting))
+            return '󰂳';
         if (adapter?.devices.values.filter(dev => dev.connected).length > 0)
             return '󰂱';
         return '󰂯';
