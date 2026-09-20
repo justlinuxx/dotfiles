@@ -1,46 +1,40 @@
-return {
-    { 'mason-org/mason.nvim', opts = {} },
+require('mason').setup()
+require('mason-lspconfig').setup({})
+require('mason-tool-installer').setup({
+	ensure_installed = {
+        -- LSP
+		'lua_ls',
+		'tailwindcss-language-server',
+		'ts_ls',
+        'pylsp',
+        'prismals',
 
-    {
-        "mason-org/mason-lspconfig.nvim",
-        opts = {
-            ensure_installed = {
-                'lua_ls',
-                'pyright',
-                'svelte',
-                'bashls',
-                'tailwindcss',
-                'rust_analyzer'
-            },
-        }
-    },
+        -- Formatters
+		'eslint',
+		'stylua',
+		'prettierd',
+	},
+	auto_update = true,
+	run_on_start = true,
+})
 
-    {
-        "neovim/nvim-lspconfig",
-        dependencies = { 'mason-org/mason-lspconfig.nvim' },
-        config = function()
-            vim.lsp.config('cssls', {
-                settings = {
-                    css = {
-                        validate = false,
-                    },
-                },
-            })
+vim.api.nvim_create_autocmd("LspAttach", {
+    callback = function(event)
+        local opts = { buffer = event.buf }
+        vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+        vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+        vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+        vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 
-            vim.lsp.config('qmlls', { cmd = { 'qmlls6', '-E' }, })
-            vim.lsp.enable('qmlls')
-
-            vim.api.nvim_create_autocmd("LspAttach", {
-                callback = function(event)
-                    local opts = { buffer = event.buf }
-                    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-                    vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-                    vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-                    vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-                    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-                    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+        vim.keymap.set({ "n", "v" }, "<leader>ca", function()
+            require("tiny-code-action").code_action({
+                filter = function(action)
+                    return not action.disabled
                 end,
             })
-        end
-    }
-}
+        end, opts)
+
+        vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, opts)
+
+    end
+})

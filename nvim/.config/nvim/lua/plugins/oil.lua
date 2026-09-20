@@ -1,10 +1,17 @@
-return {
-  'stevearc/oil.nvim',
-  opts = {},
-  dependencies = { { "nvim-tree/nvim-web-devicons", opts = {} } },
-  lazy = false,
-  config = function()
-    require('oil').setup()
-    vim.keymap.set('n', '-', '<cmd>Oil<cr>', { desc = 'Open Oil Explorer' })
-  end
-}
+local oil = require('oil')
+local oil_git_status = require('oil-git-status')
+
+oil.setup({
+	skip_confirm_for_simple_edits = true,
+	win_options = {
+		signcolumn = 'yes',
+	},
+	view_options = {
+		show_hidden = true,
+	},
+	watch_for_changes = true,
+})
+
+oil_git_status.setup({
+	show_ignored = false,
+})
