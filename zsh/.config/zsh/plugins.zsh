@@ -22,4 +22,9 @@ zplugin-update() {
 _zplugin_load zsh-users zsh-autosuggestions
 _zplugin_load zdharma-continuum fast-syntax-highlighting
 _zplugin_load zsh-users zsh-history-substring-search
+
+ZVM_SYSTEM_CLIPBOARD_ENABLED=true
+ZVM_VI_HIGHLIGHT_BACKGROUND=#353749
+ZVM_VI_HIGHLIGHT_FOREGROUND=#cdd6f4
+ZVM_VI_HIGHLIGHT_EXTRASTYLE=bold
 _zplugin_load jeffreytse zsh-vi-mode
