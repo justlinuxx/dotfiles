@@ -2,8 +2,7 @@ hl.on("hyprland.start", function()
     -- Shell
     hl.exec_cmd("quickshell")
 
-    -- Notification Daemon
-    hl.exec_cmd("mako")
+    hl.exec_cmd("quickshell -p ~/.config/quickshell/Notifications.qml")
 
     -- Wallpaper
     hl.exec_cmd("hyprpaper")

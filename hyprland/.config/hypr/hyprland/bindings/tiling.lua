@@ -7,6 +7,7 @@ bind(mainMod .. " + M", hl.dsp.exit())
 bind(mainMod .. " + T", hl.dsp.window.float({ action = "toggle" }))
 bind(mainMod .. " + P", hl.dsp.window.pseudo())
 bind(mainMod .. " + F", hl.dsp.window.fullscreen())
+bind(mainMod .. " + ALT + F", hl.dsp.window.fullscreen({ mode = "maximized" }))
 
 bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
 bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))

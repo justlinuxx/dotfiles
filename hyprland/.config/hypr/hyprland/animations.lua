@@ -11,4 +11,3 @@ hl.curve("easy", { type = "spring", mass = 1, stiffness = 71.2633, dampening = 1
 hl.animation({ leaf = "global", enabled = false, speed = 10, bezier = "default" })
 hl.animation({ leaf = "windows", enabled = true, speed = 3, bezier = "easeOutQuint", style = "popin 90%" })
 hl.animation({ leaf = "fade", enabled = true, speed = 3.03, bezier = "quick" })
-hl.animation({ leaf = "workspaces", enabled = true, speed = 1.5, bezier = "easeInOutCubic", style = "fade" })
