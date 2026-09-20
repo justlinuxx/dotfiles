@@ -3,5 +3,5 @@ shell-integration = zsh
 shell-integration-features = true
 confirm-close-surface = false
 working-directory = inherit
-font-family = "CaskaydiaMono Nerd Font Propo"
-font-size = 13
+font-family = "CaskaydiaMono NFP SemiBold"
+font-size = 14
