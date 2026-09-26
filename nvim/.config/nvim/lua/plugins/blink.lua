@@ -14,12 +14,12 @@ cmp.setup({
 	completion = {
         keyword = { range = 'full' },
         list = {
-            selection = { preselect = false, auto_insert = false }
+            selection = { auto_insert = false },
         },
 		menu = {
 			auto_show = true,
 			draw = {
-				treesitter = { "lsp" },
+                treesitter = { 'lsp' },
 				columns = { { "kind_icon", "label", "label_description", gap = 1 }, { "kind" } },
 			},
 		},

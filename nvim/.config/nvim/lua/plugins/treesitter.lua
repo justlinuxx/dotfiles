@@ -3,7 +3,11 @@ local languages = {
     'typescript',
     'tsx',
     'jsx',
-    'html'
+    'html',
+    'cpp',
+    'c',
+    'svelte',
+    'css'
 }
 
 local installed = require('nvim-treesitter.config').get_installed()

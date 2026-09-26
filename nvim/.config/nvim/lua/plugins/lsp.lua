@@ -8,11 +8,15 @@ require('mason-tool-installer').setup({
 		'ts_ls',
         'pylsp',
         'prismals',
+        'cssls',
+        'clangd',
+        'svelte',
 
         -- Formatters
 		'eslint',
 		'stylua',
 		'prettierd',
+        'biome'
 	},
 	auto_update = true,
 	run_on_start = true,

@@ -37,6 +37,9 @@ vim.pack.add({
 
     -- Git
     gh('lewis6991/gitsigns.nvim'),
+
+    -- Other
+    gh('m4xshen/hardtime.nvim')
 })
 
 require('plugins.oil')

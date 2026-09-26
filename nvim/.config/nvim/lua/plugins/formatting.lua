@@ -1,5 +1,5 @@
 local javascript_formatters = {
-    'prettierd',
+    'biome',
 }
 
 require("conform").setup({

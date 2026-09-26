@@ -17,12 +17,16 @@ vim.o.signcolumn = 'yes'
 vim.o.number = true
 vim.o.cursorline = true
 vim.o.wrap = false
+vim.o.scrolloff = 5
 
 -- Completion
 vim.opt.completeopt = "menu,menuone,noselect,preview"
 
 -- Clipboard
 vim.opt.clipboard:append('unnamedplus')
+
+-- History
+vim.o.undofile = true
 
 vim.o.smartcase = true -- until search pattern contains upper case characters
 
