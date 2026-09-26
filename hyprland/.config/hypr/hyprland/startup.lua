@@ -4,6 +4,9 @@ hl.on("hyprland.start", function()
 
     hl.exec_cmd("quickshell -p ~/.config/quickshell/Notifications.qml")
 
+    -- Terminal
+    hl.exec_cmd("foot --server")
+
     -- Wallpaper
     hl.exec_cmd("hyprpaper")
 
@@ -20,7 +23,13 @@ hl.on("hyprland.start", function()
     -- User apps
     hl.exec_cmd("discord")
     hl.exec_cmd("niri-screen-time -daemon")
+
+    hl.exec_cmd("ghostty +new-window -e xdg-open ~/Documents/notes.txt")
+
+    -- Set Theme
+    hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme prefer-dark") 
 end)
+
 
 
 hl.env("XCURSOR_SIZE", "24")

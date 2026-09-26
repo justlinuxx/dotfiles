@@ -2,7 +2,7 @@ local mainMod = "SUPER"
 local bind = hl.bind
 
 -- Apps
-local terminal = "ghostty +new-window"
+local terminal = "footclient"
 local menu = "fuzzel"
 local fileManager = "nautilus"
 local browser = "zen-browser"
