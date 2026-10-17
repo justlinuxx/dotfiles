@@ -11,6 +11,7 @@ require('mason-tool-installer').setup({
         'cssls',
         'clangd',
         'svelte',
+        'qmlls',
 
         -- Formatters
 		'eslint',
@@ -30,13 +31,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
         vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
         vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 
-        vim.keymap.set({ "n", "v" }, "<leader>ca", function()
-            require("tiny-code-action").code_action({
-                filter = function(action)
-                    return not action.disabled
-                end,
-            })
-        end, opts)
+        vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action ,opts)
 
         vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, opts)
 
