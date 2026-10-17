@@ -2,4 +2,4 @@
 
 tui=$1
 
-xdg-terminal-exec --app-id="cfg.tui.${tui}" $@
+~/bin/cfg-launch-terminal --toplevel-tag="cfg.tui.${tui}" $@
