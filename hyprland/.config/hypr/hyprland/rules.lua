@@ -16,7 +16,7 @@ hl.window_rule({
 
 hl.window_rule({
     match = {
-        class = "cfg.tui.*"
+        xdg_tag = "cfg.tui.*"
     },
     float = true,
     size = { 1000, 700 }
