@@ -1,3 +1,5 @@
+require("mini.starter").setup()
+--
 -- Center picker
 local win_config = function()
 	local height = math.floor(0.4 * vim.o.lines)
@@ -54,6 +56,9 @@ require("mini.pick").setup({
 	window = {
 		config = win_config,
 		style = "minimal",
+	},
+	options = {
+		use_cache = true,
 	},
 })
 

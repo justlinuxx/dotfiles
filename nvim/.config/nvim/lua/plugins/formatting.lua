@@ -1,8 +1,10 @@
 local javascript_formatters = {
-    'biome',
+	"biome",
 }
 
-require("conform").setup({
+local conform = require("conform")
+
+conform.setup({
 	format_on_save = {
 		timeout_ms = 1000,
 		lsp_format = "fallback",
@@ -13,5 +15,8 @@ require("conform").setup({
 		typescript = javascript_formatters,
 		javascriptreact = javascript_formatters,
 		typescriptreact = javascript_formatters,
+		svelte = { "biome" },
 	},
 })
+
+vim.keymap.set("n", "<leader>f", conform.format)

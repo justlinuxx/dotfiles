@@ -1,11 +1,7 @@
-require('modicator').setup({})
+require("modicator").setup({})
 
-require('alpha').setup(
-    require('alpha.themes.startify').config
-)
+require("hardtime").setup()
 
-require('hardtime').setup()
-
-local tsj = require('treesj')
+local tsj = require("treesj")
 tsj.setup()
-vim.keymap.set('n', '<leader>m', tsj.toggle)
+vim.keymap.set("n", "<leader>m", tsj.toggle)
