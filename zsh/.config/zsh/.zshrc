@@ -8,17 +8,16 @@ setopt SHARE_HISTORY
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_SPACE
 
-# # SHELL BEHAVIOUR
+# SHELL BEHAVIOUR
 setopt AUTOCD
 setopt NOBEEP
 setopt NUMERIC_GLOB_SORT
 
-# # ZOXIDE
+# ZOXIDE
 eval "$(zoxide init zsh)"
-#
-# # COMPLETION
+
+# COMPLETION
 autoload -Uz compinit
-# Initialize completion with cached metadata file
 compinit
 # Enable interactive completion menu selection
 zstyle ':completion:*' menu select
@@ -42,9 +41,3 @@ source "$ZDOTDIR/plugins.zsh"
 # Prompt/theme
 source "$ZDOTDIR/prompt.zsh"
 
-# pnpm
-# export PNPM_HOME='/home/linux/.local/share/pnpm'
-# case ":$PATH:" in
-#   *":$PNPM_HOME/bin:"*) ;;
-#   *) export PATH="$PNPM_HOME/bin:$PATH" ;;
-# esac
