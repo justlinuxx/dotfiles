@@ -6,7 +6,7 @@ vim.o.expandtab = false
 
 -- Appearance
 vim.o.termguicolors = true
-vim.o.showmode = false
+vim.o.showmode = true
 
 -- Indentation
 vim.o.autoindent = true
@@ -30,6 +30,11 @@ vim.o.undofile = true
 
 vim.o.smartcase = true -- until search pattern contains upper case characters
 
-vim.o.autoread = true -- Auto update file if it has changed
+vim.o.autoread = true  -- Auto update file if it has changed
 
-vim.opt.fillchars = { eob = " " }
+vim.diagnostic.config({
+	underline = true,
+	virtual_text = true,
+	update_in_insert = false,
+	severity_sort = true,
+})

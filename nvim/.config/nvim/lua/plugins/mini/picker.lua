@@ -1,5 +1,3 @@
-require("mini.starter").setup()
---
 -- Center picker
 local win_config = function()
 	local height = math.floor(0.4 * vim.o.lines)
