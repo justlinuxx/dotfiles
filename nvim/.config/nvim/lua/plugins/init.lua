@@ -3,19 +3,18 @@ local gh = function(plugin)
 end
 
 vim.pack.add({
-	gh("stevearc/oil.nvim"),
-	gh("catppuccin/nvim"),
-	gh("neovim/nvim-lspconfig"),
-	gh("stevearc/conform.nvim"),
-	gh("rafamadriz/friendly-snippets"),
-	gh("nvim-treesitter/nvim-treesitter"),
+	gh("stevearc/oil.nvim"), -- File Manager
+	gh("catppuccin/nvim"), -- Colorscheme
+	gh("neovim/nvim-lspconfig"), -- Preconfigure LSPs
+	gh("stevearc/conform.nvim"), -- Formatting
+	gh("rafamadriz/friendly-snippets"), -- More snippets
+	gh("nvim-treesitter/nvim-treesitter"), -- Treesitter Parsers
 	gh("nvim-mini/mini.nvim"),
+	gh("nvim-tree/nvim-web-devicons"),
+
 	gh("Saghen/blink.cmp"),
 	gh("Saghen/blink.lib"),
-	gh("mikavilpas/blink-ripgrep.nvim"),
-	gh("mason-org/mason.nvim"),
-	gh("mason-org/mason-lspconfig.nvim"),
-	gh("WhoIsSethDaniel/mason-tool-installer.nvim"),
+
 	gh("m4xshen/hardtime.nvim"),
 })
 
