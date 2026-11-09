@@ -10,6 +10,12 @@ export VISUAL="nvim"
 
 export GPG_TTY=$(tty)
 
+export MANPAGER="nvim +Man!"
+
 export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 
-export MANPAGER="nvim +Man!"
+export PNPM_HOME='~/.local/share/pnpm'
+case ":$PATH:" in
+  ":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac

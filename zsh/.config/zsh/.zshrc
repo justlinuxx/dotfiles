@@ -16,9 +16,10 @@ setopt NUMERIC_GLOB_SORT
 # ZOXIDE
 eval "$(zoxide init zsh)"
 
+
 # COMPLETION
 autoload -Uz compinit
-compinit
+compinit -d $XDG_CACHE_HOME/zsh/zcompcache
 # Enable interactive completion menu selection
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # lowercase input matches upper and lower

@@ -1,9 +1,26 @@
-# eval "$(starship init zsh)"
 BOLD="%B"
 NO_BOLD="%b"
 
 USERNAME="%n"
 HOSTNAME="%M"
 
-PROMPT="%F{cyan}$USERNAME%F{7}@%F{green}$HOSTNAME%f %F{blue}%1~%f $ "
+
+short_dir () {
+  git_root=$PWD
+  while [[ $git_root != / ]] && [[ ! -e $git_root/.git ]]; do
+	git_root=$git_root:h
+  done
+  if [[ $git_root = / ]]; then
+    unset git_root
+    prompt_short_dir=%~
+  else
+	prompt_short_dir="$(basename $git_root)${PWD/#$git_root/}"
+  fi
+  echo $prompt_short_dir
+}
+
+
+setopt prompt_subst
+
+PROMPT='%F{blue}%n@%M%f %F{green}$(short_dir)%f $ '
 RPROMPT="%(?..%F{red}x)%f"
