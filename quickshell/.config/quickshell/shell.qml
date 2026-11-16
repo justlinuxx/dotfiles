@@ -3,6 +3,6 @@ import QtQuick
 import Quickshell
 
 Scope {
-    Panel {}
-    AppsMenu {}
+    // Panel {}
+	Notifications {}
 }
