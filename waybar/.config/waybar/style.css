@@ -1,58 +1,99 @@
-@define-color fg white;
-@define-color bg #000;
+@define-color bg    #1a1b26; 
+@define-color fg    #cdd6f4; 
+@define-color blk   #32344a; 
+@define-color red   #f7768e; 
+@define-color grn   #9ece6a; 
+@define-color ylw   #e0af68; 
+@define-color blu   #7aa2f7; 
+@define-color mag   #ad8ee6; 
+@define-color cyn   #0db9d7; 
+@define-color brblk #444b6a; 
+@define-color white #ffffff; 
 
 * {
-    border: none;
-    border-radius: 0;
-    font-family: "CaskaydiaMono Nerd Font Propo";
-    font-size: 13;
-    min-height: 0;
-    padding: 0;
-    margin: 0;
+    font-family: "CaskaydiaMono Nerd Font", monospace;
+    font-size: 16px;
+    font-weight: bold;
 }
-
 
 window#waybar {
-    background: black;
-}
-
-.modules-left,
-.modules-center,
-.modules-right {
-    padding: 3px 5px;
-}
-
-.module {
-    background: @bg;
-    padding: 0 5px;
-    margin: 0 2px;
-    border-radius: 15px;
-}
-
-#workspaces {
-    background: @bg;
-    padding: 2px 5px;
-    border: none;
+    background-color: @bg;
+    color: @fg;
 }
 
 #workspaces button {
-    min-width: 20px;
-    padding: 2px;
-    margin: 0 2px;
-    transition: all 150ms;
+    padding: 0 6px;
+    color: @cyn;
+    background: transparent;
+    border-bottom: 3px solid @bg;
+	border-radius: 0;
 }
-
 #workspaces button.active {
-    background: @fg;
-    color: @bg;
+    color: @cyn;
+    border-bottom: 3px solid @cyn;
 }
-
-
 #workspaces button.empty {
-    opacity: 0.5;
+    color: @white;
 }
-
+#workspaces button.empty.active {
+    color: @cyn;
+    border-bottom: 3px solid @mag;
+}
 
 #workspaces button.urgent {
-    background: red;
+    background-color: @red;
+}
+
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#clock,
+#custom-sep,
+#battery,
+#cpu,
+#memory,
+#disk,
+#network,
+#tray {
+    padding: 0 8px;
+    color: @white;
+}
+
+#custom-sep {
+    color: @brblk;
+}
+
+#clock {
+    color: @cyn;
+    border-bottom: 2px solid @cyn;
+}
+
+#battery {
+    color: @ylw;
+    border-bottom: 2px solid @ylw;
+}
+
+#memory {
+    color: @mag;
+    border-bottom: 2px solid @mag;
+}
+
+#cpu {
+    color: @grn;
+    border-bottom: 2px solid @grn;
+}
+
+#network {
+    color: @blu;
+    border-bottom: 2px solid @blu;
+}
+
+#network.disconnected {
+    background-color: @red;
+}
+
+#tray {
+    background-color: #2980b9;
 }
