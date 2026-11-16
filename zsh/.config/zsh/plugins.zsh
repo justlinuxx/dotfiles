@@ -19,10 +19,8 @@ zplugin-update() {
   done
 }
 
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-_zplugin_load zsh-users zsh-autosuggestions
-
 _zplugin_load zdharma-continuum fast-syntax-highlighting
+_zplugin_load  zsh-users zsh-completions
 
 ZVM_SYSTEM_CLIPBOARD_ENABLED=true
 ZVM_VI_HIGHLIGHT_BACKGROUND=#353749

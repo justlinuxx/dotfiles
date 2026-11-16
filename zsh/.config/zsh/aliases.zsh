@@ -1,8 +1,7 @@
 alias ls="eza --icons always --group-directories-first"
 alias ll="eza -lh --icons --git --group-directories-first"
 alias la="eza -lah --icons --git --group-directories-first"
-alias tree="eza --tree --icons"
-compdef eza=ls # Completions for eza like ls
+alias tree="eza --tree --icons auto"
 
 alias cat="bat"
 
