@@ -24,6 +24,8 @@
         "custom/sep",
         "battery",
         "custom/sep",
+        "pulseaudio",
+        "custom/sep",
         "clock",
 		"custom/sep",
     ],
@@ -64,6 +66,10 @@
         "format": "Online",
         "format-disconnected": "Disconnected ⚠"
     },
+	"pulseaudio": {
+		"format": "Vol: {volume}%",
+		"format-muted": "Muted",
+	},
     "custom/sep": {
         "format" : "|",
         "interval" : 0

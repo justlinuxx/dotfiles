@@ -66,8 +66,8 @@ button:hover {
 }
 
 #clock {
-    color: @blu;
-    border-bottom: 2px solid @blue;
+    color: @white;
+    border-bottom: 2px solid @white;
 }
 
 #battery {
@@ -76,8 +76,8 @@ button:hover {
 }
 
 #memory {
-    color: @mag;
-    border-bottom: 2px solid @mag;
+    color: @blu;
+    border-bottom: 2px solid @blu;
 }
 
 #cpu {
@@ -88,6 +88,11 @@ button:hover {
 #network {
     color: @cyn;
     border-bottom: 2px solid @cyn;
+}
+
+#pulseaudio {
+    color: @mag;
+    border-bottom: 2px solid @mag;
 }
 
 #network.disconnected {
