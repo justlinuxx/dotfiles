@@ -12,3 +12,4 @@ password=$(printf '%s\n' "${password_files[@]}" | fuzzel --dmenu)
 [[ -n $password ]] || exit
 
 pass show -c "$password" 2>/dev/null
+notify-send "Password was copied into clipboard"
