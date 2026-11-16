@@ -5,6 +5,7 @@ vim.lsp.enable({
 	"cssls",
 	"tailwindcss-language-server",
 	"prismals",
+	"ast-grep",
 
 	"pylsp",
 	"clangd",

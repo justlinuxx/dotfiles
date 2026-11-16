@@ -12,6 +12,7 @@ conform.setup({
 		javascriptreact = javascript_formatters,
 		typescriptreact = javascript_formatters,
 		svelte = { "biome" },
+		fallback = "lsp"
 	},
 })
 
