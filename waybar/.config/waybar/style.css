@@ -57,7 +57,7 @@ button:hover {
 #disk,
 #network,
 #tray {
-    padding: 0 8px;
+    padding: 0 4px;
     color: @white;
 }
 
@@ -66,8 +66,8 @@ button:hover {
 }
 
 #clock {
-    color: @cyn;
-    border-bottom: 2px solid @cyn;
+    color: @blu;
+    border-bottom: 2px solid @blue;
 }
 
 #battery {
@@ -86,8 +86,8 @@ button:hover {
 }
 
 #network {
-    color: @blu;
-    border-bottom: 2px solid @blu;
+    color: @cyn;
+    border-bottom: 2px solid @cyn;
 }
 
 #network.disconnected {
