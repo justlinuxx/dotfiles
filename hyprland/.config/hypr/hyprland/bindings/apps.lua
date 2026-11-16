@@ -5,7 +5,7 @@ local bind = hl.bind
 local terminal = "footclient"
 local menu = "fuzzel"
 local fileManager = "footclient zsh -c yazi"
-local browser = "zen-browser"
+local browser = "librewolf"
 
 bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu)) -- Apps Menu
 
