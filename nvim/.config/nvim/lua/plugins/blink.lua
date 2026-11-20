@@ -15,6 +15,7 @@ cmp.setup({
 		keyword = { range = 'full' },
 		list = {
 			selection = { auto_insert = false },
+			max_items = 5,
 		},
 		menu = {
 			auto_show = true,
