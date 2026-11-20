@@ -95,9 +95,6 @@ button:hover {
     border-bottom: 2px solid @mag;
 }
 
-#network.disconnected {
-    background-color: @red;
-}
 
 #tray {
     background-color: #2980b9;

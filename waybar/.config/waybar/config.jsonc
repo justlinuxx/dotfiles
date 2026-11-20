@@ -64,7 +64,7 @@
     },
     "network": {
         "format": "Online",
-        "format-disconnected": "Disconnected ⚠"
+        "format-disconnected": "Disconnected "
     },
 	"pulseaudio": {
 		"format": "Vol: {volume}%",
