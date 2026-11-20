@@ -1,6 +1,6 @@
-alias ls="eza --icons always --group-directories-first"
-alias ll="eza -lh --icons --git --group-directories-first"
-alias la="eza -lah --icons --git --group-directories-first"
+alias ls="eza --group-directories-first"
+alias ll="eza -lh --git --group-directories-first"
+alias la="eza -lah --git --group-directories-first"
 alias tree="eza --tree --icons auto"
 
 alias cat="bat"
