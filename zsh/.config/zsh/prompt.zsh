@@ -22,5 +22,5 @@ short_dir () {
 
 setopt prompt_subst
 
-PROMPT='%F{blue}%n@%M%f %F{green}$(short_dir)%f $ '
+PROMPT='%F{green}%n@%M%f %F{blue}$(short_dir)%f $ '
 RPROMPT="%(?..%F{red}x)%f"
