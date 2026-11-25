@@ -29,7 +29,7 @@ hl.config({
 
 		-- Change transparency of focused and unfocused windows
 		active_opacity = 1,
-		inactive_opacity = 0.9,
+		inactive_opacity = 1,
 	},
 	animations = {
 		enabled = true,
